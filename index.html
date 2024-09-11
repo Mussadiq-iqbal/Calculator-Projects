@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- calculator project -->
+<h1>Calculator Project</h1>
+
+<div id="calculator">
+  <input type="text" id="display-area" readonly>
+  <div id="calculator-button">
+    <button id="cal-button" onclick="display_content = ''; clickfunc()">C</button>
+    
+    <button id="cal-button" onclick="display_content += '1'; clickfunc()">1</button>
+    <button id="cal-button" onclick="display_content += '2'; clickfunc()">2</button>
+    <button id="cal-button" onclick="display_content += '+'; clickfunc()">+</button>
+    <button id="cal-button" onclick="display_content += '3'; clickfunc()">3</button>
+    <button id="cal-button" onclick="display_content += '4'; clickfunc()">4</button>
+    <button id="cal-button" onclick="display_content += '-'; clickfunc()">-</button>
+    <button id="cal-button" onclick="display_content += '5'; clickfunc()">5</button>
+    <button id="cal-button" onclick="display_content += '6'; clickfunc()">6</button>
+    <button id="cal-button" onclick="display_content += '*'; clickfunc()">*</button>
+    <button id="cal-button" onclick="display_content += '7'; clickfunc()">7</button>
+    <button id="cal-button" onclick="display_content += '8'; clickfunc()">8</button>
+    <button id="cal-button" onclick="display_content += 'x'; clickfunc()">/</button>
+
+    <button id="cal-button" onclick="let result = eval(display_content)
+    display_content = result; clickfunc()">=</button>
+
+    <button id="cal-button" onclick="display_content += '9'; clickfunc()">9</button>
+    <button id="cal-button" onclick="display_content += '0'; clickfunc()">0</button>
+    <button id="cal-button" onclick="display_content += '.'; clickfunc()">.</button>
+  </div>
+</div>
+
+<!-- javascript for project -->
+<script>
+var display_content = '';
+function clickfunc(){
+document.querySelector('#display-area').value = display_content;
+}
+</script>
+</body>
+</html>
